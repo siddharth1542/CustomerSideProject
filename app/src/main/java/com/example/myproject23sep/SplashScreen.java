@@ -8,6 +8,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class SplashScreen extends AppCompatActivity
 {
@@ -23,6 +24,8 @@ public class SplashScreen extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
         getSupportActionBar().hide();
+
+        ButterKnife.bind(this);
 
         top= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.top);
         imageView.setAnimation(top);
