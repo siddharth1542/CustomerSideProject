@@ -19,15 +19,9 @@ public class OTP_Verify extends AppCompatActivity {
 
         phoneNumber = getIntent().getStringExtra("mobile");
 
-        new Timer().schedule(new TimerTask()
-        {
-            public void run()
-            {
                 Intent intent = new Intent(getApplicationContext(), Dashboard.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
 
-            }
-        }, 2000);
     }
 }
