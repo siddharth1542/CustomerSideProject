@@ -8,17 +8,23 @@ import android.os.Bundle;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Welcome extends AppCompatActivity {
+public class OTP_Verify extends AppCompatActivity {
+
+    String phoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_otp_verify);
+
+        phoneNumber = getIntent().getStringExtra("mobile");
+
         new Timer().schedule(new TimerTask()
         {
             public void run()
             {
-                Intent intent = new Intent(getApplicationContext(), Login.class);
+                Intent intent = new Intent(getApplicationContext(), Dashboard.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
 
             }

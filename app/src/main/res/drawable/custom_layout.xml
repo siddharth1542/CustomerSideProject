@@ -4,8 +4,8 @@
     <item>
         <shape>
             <gradient
-                android:startColor="@color/main_app_color"
-                android:endColor="@color/main_app_color"
+                android:startColor="@color/white"
+                android:endColor="@color/white"
                 />
             <corners
                 android:topLeftRadius="10dp"
